@@ -11,6 +11,9 @@ public class Funciones {
         }
         System.out.println("]");
     }
+    public static void mostrarMatrizInt(int [][]matriz){
+        
+    }
 
     }
 
