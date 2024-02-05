@@ -47,6 +47,9 @@ public class Funciones {
         }
         return false;
     }
+    public static double multiplica(double a, double b){
+        return a*b;
+    }
 
     }
 
