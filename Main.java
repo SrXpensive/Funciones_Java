@@ -15,6 +15,8 @@ public class Main {
         double a = 3;
         double b = 4;
         double c = 5;
+        int fibonacciTerm;
+        int resultado;
 
         do{
             System.out.println("1. Ejercicio 1 - Mostrar Vector");
@@ -25,6 +27,7 @@ public class Main {
             System.out.println("6. Ejercicio 6 - Multiplica dos números");
             System.out.println("7. Ejercicio 7 - Compruebo el teorema de pitágoras para los valores 3,4,5");
             System.out.println("8. Ejercicio 8 - Devolver el número de menores de edad en el array "+Arrays.toString(edades));
+            System.out.println("9. Ejercicio 9 - Calcular el n término de la serie fibonacci");
             opcion = Leer.leerEntero("Introduce una opción: ");
             switch(opcion){
                 case 1:
@@ -66,8 +69,14 @@ public class Main {
                         System.out.println("No se cumple el teorema");
                     }
                     System.out.println("-----------");
+                    break;
                 case 8:
                     System.out.println("Existen "+Funciones.totalMenores(edades)+" personas menores de edad");
+                    break;
+                case 9:
+                    fibonacciTerm = Leer.leerEntero("Introduce el término n de fibonacci y te digo cuál es: ");
+                    resultado = Funciones.fibonacci(fibonacciTerm);
+                    System.out.println("El término "+fibonacciTerm+" de la serie fibonacci es "+resultado);
             }
         }while(opcion != 0);
 

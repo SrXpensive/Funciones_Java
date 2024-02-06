@@ -71,6 +71,15 @@ public class Funciones {
         }
         return (vector.length-mayores);
     }
+    public static int fibonacci(int a){
+        int x;
+        if(a == 0 || a == 1){
+            return 1;
+        }else{
+            x = fibonacci(a-1)+fibonacci(a-2);
+        }
+        return x;
+    }
 
     }
 
