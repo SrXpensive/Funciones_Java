@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+//Autor: Eduardo Caro Lorente - 1DAW
 public class Funciones {
 
     public static void mostrarVectorInt(int []vector){
@@ -49,6 +49,27 @@ public class Funciones {
     }
     public static double multiplica(double a, double b){
         return a*b;
+    }
+    public static boolean esPitagoras(double x, double y, double z){
+        if(multiplica(x,x)+multiplica(y,y)==multiplica(z,z)){
+            return true;
+        }
+        return false;
+    }
+    public static boolean esMayorEdad(int a){
+        if(a>=18){
+            return true;
+        }
+        return false;
+    }
+    public static int totalMenores(int [] vector){
+        int mayores = 0;
+        for (int i = 0; i < vector.length; i++){
+            if(esMayorEdad(vector[i])){
+                mayores++;
+            }
+        }
+        return (vector.length-mayores);
     }
 
     }
