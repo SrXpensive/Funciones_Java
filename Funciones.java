@@ -71,14 +71,27 @@ public class Funciones {
         }
         return (vector.length-mayores);
     }
-    public static int fibonacci(int a){
-        int x;
+    public static long fibonacci(long a){
+        long x;
         if(a == 0 || a == 1){
             return 1;
         }else{
             x = fibonacci(a-1)+fibonacci(a-2);
+            return x;
         }
-        return x;
+
+    }
+    public static void aproximaPhi(int n){
+        double cociente;
+        long []vector = new long [n];
+        for(int i=0; i<n;i++){
+            vector[i]=fibonacci(i);
+        }
+        System.out.println(Arrays.toString(vector));
+        for(int i=1;i<vector.length;i++){
+            cociente = (double) (vector[i]) /vector[i-1];
+            System.out.printf("%2.20f%n",cociente);
+        }
     }
 
     }

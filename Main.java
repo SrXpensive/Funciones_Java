@@ -15,8 +15,9 @@ public class Main {
         double a = 3;
         double b = 4;
         double c = 5;
-        int fibonacciTerm;
-        int resultado;
+        long fibonacciTerm;
+        long resultado;
+        int valoresFibo;
 
         do{
             System.out.println("1. Ejercicio 1 - Mostrar Vector");
@@ -28,6 +29,7 @@ public class Main {
             System.out.println("7. Ejercicio 7 - Compruebo el teorema de pitágoras para los valores 3,4,5");
             System.out.println("8. Ejercicio 8 - Devolver el número de menores de edad en el array "+Arrays.toString(edades));
             System.out.println("9. Ejercicio 9 - Calcular el n término de la serie fibonacci");
+            System.out.println("10. Ejercicio 10 - Número phi");
             opcion = Leer.leerEntero("Introduce una opción: ");
             switch(opcion){
                 case 1:
@@ -77,8 +79,11 @@ public class Main {
                     fibonacciTerm = Leer.leerEntero("Introduce el término n de fibonacci y te digo cuál es: ");
                     resultado = Funciones.fibonacci(fibonacciTerm);
                     System.out.println("El término "+fibonacciTerm+" de la serie fibonacci es "+resultado);
+                    break;
+                case 10:
+                    valoresFibo = Leer.leerEntero("Introduce el número de términos de la serie fibonacci que quieres analizar, para demostrar que se acerca al número phi: ");
+                    Funciones.aproximaPhi(valoresFibo);
             }
         }while(opcion != 0);
-
     }
 }
